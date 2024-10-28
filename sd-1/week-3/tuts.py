@@ -61,10 +61,39 @@ def calculate_discounts(purchased_amount: float):
         print("No discount")
 
 
+#Hard Exercises
+
 # Tax Calculator Based on Gross Income
-"""def calculate_tax():
+def calculate_tax():
     gross_income = float(input("Enter your gross income: "))
     tax=0
-    if 12500 <= gross_income < 15000:"""
+    if 12500 < gross_income:
+        tax+=(gross_income - 12500) * 20/100
+    if 50000 < gross_income:
+        tax+=(gross_income - 50000) * 40/100 - (gross_income - 50000) * 20/100
+    if 150000 < gross_income:
+        tax+=(gross_income - 150000) * 45/100 - (gross_income - 150000) * 40/100
+    net_income=gross_income - tax
+    print(f"Tax owed {tax} Net income is {net_income}")
 
+def calculate_grade():
+    c_score = float(input("Enter your coursework marks: "))
+    m_score = float(input("Enter your midterm marks: "))
+    f_score = float(input("Enter your final exam marks: "))
+    if c_score > 100 or c_score < 0 or m_score > 100 or m_score < 0 or f_score > 100 or f_score < 0:
+        print("Invalid score")
+        return
 
+    final_score=c_score/100 * 40 + m_score/100 * 25 + f_score/100 * 35
+
+    print(f"final score {final_score}")
+    if final_score < 40:
+        print("grade F")
+    elif final_score < 50:
+        print("grade C")
+    elif final_score < 70:
+        print("grade B")
+    else:
+        print("grade A")
+
+calculate_grade()
