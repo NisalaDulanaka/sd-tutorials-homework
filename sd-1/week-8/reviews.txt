@@ -1,0 +1,4 @@
+This product works well, 4
+This product is not good, 5
+This product works well, 3
+This product is amazing, 4
